@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="add"></div>
+    <script>
+        let n=Number(prompt("enter a number"));
+        let rev=Number(0);
+        while(n!=0){
+            let a =parseInt(n%10);
+            rev = rev*10+a;
+            n=parseInt(n/10);
+        }
+        alert("rev= "+rev);
+        let arr = [1,"Jit","SAHA","'$$$'"];
+        document.write(arr.sort(),'<br/>', arr.toString(),'<br/>', arr.join('^'),'<br/>',arr.pop());
+        arr.push(22);
+        console.log(arr[2].concat(arr[1]),arr.slice(3),arr.reverse());
+        console.log(arr,arr.shift(), arr.unshift("Hello"));
+        arr1 = [1,5,3,7,9,2]
+        console.log(arr1)
+        console.log(arr1.sort())
+        console.log(arr1.reverse());
+        console.log(arr.filter((ele)=>{return ele=="SAHA";}));
+    </script>
+</body>
+</html>

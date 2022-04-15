@@ -1,0 +1,50 @@
+#bdlt{
+    width: 40%;
+    float: left;
+    
+}
+#bdrt{
+    color: rgb(2, 7, 12);
+    
+}
+#dp{
+    border-radius: 100px;
+    margin: 5%;
+    height: 150px;
+    width: 150px;
+    border: 15px solid rgb(255, 255, 255);
+}
+#headerlt{
+    display: flex;
+    justify-content: center;
+}
+table, th, td{
+    border: 2px solid;
+}
+table{
+    width: 90%;
+    text-align: center;
+    margin: 2%;
+}
+th,td{
+    padding: 1%;
+    margin: 1%;
+}
+body{
+    margin: 2%;
+}
+#linkgit{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: black;
+    border-radius: 10px;
+}
+#dp:hover{
+  height: 190px !important;
+  width: 190px !important;         
+}
+#contacts{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}

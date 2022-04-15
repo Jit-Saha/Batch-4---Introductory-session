@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site 2</title>
+    <style>
+        button{
+            padding: 1% 2%;
+            margin: 1%;
+            background-color: rgb(20, 100, 153);
+            color: white;
+            font-size: 1.2rem;
+            text-align: center;
+            border-radius: 10px;
+        }
+        input, #ans{
+            margin: 1%;
+            padding: 1%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Adding String with a number</h1>
+    <div id="ans1"></div>
+    <div id="Calc">
+        <h1>Calculations:</h1>
+        <div>Enter value of a and b: </div>
+        a= <input type="number" id="vala"/>
+        <br>
+        b= <input type="number" id="valb"/>
+        <br>
+        <button type="submit" onclick="pro()">*</button>
+        <button type="submit" onclick="sub()">-</button>
+        <button type="submit" onclick="add()">+</button>
+        <button type="submit" onclick="div()">/</button>
+        <br>
+        <div id="ans"></div>
+    </div>
+    <script>
+        let a = 10;
+        document.getElementById('ans1').innerHTML = a+5+`<h2>`+'Hi I am "Jit"'+`</h2>`+a+5;
+        let arr = ['Jit', 1, "Why so serious?"];
+        document.getElementById('ans1').innerHTML += arr;
+        let dict1 = {
+            name: "Jit",
+            roll: 22,
+            Dept: "CSE"
+        }
+        console.log(dict1['name'], dict1['roll'], dict1['Dept'],"\nCan retrive data from objects any way:\n", dict1.name, dict1.roll,dict1.Dept);
+        function pro(){
+            let c  = 1;
+            let a =document.getElementById('vala').value;
+            let b =document.getElementById('valb').value; 
+            c = a*b;
+            document.getElementById('ans').innerHTML = a+" * "+b+" is "+c;
+        }
+        function sub(){
+            let c  = 0;
+            let a =document.getElementById('vala').value;
+            let b =document.getElementById('valb').value; 
+            c = a-b;
+            document.getElementById('ans').write = a+" - "+b+" is "+c;
+            // console.log("good");
+        }
+        function add(){
+            let c  = 0;
+            let a =document.getElementById('vala').value;
+            let b =document.getElementById('valb').value; 
+            c = a+b;
+            document.getElementById('ans').write = a+" + "+b+" is "+c;
+            
+        }
+        function div(){
+            let c  = 0;
+            let a =document.getElementById('vala').value;
+            let b =document.getElementById('valb').value; 
+            c = a/b;
+            document.getElementById('ans').write = a+" / "+b+" is "+c;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        let str = "Jit Saha is my name.";
+        document.getElementById("demo").innerHTML = str+`<br/>`+str.length;
+        document.getElementById("demo").innerHTML += `<br/>`+ str.slice(4,7)+`<br/>`+str.replace("Jit","Rick");
+        document.getElementById("demo").innerHTML += `<br/>`+ str.substring(4,8)+`<br/>`+str.substr(4,8);
+        document.getElementById("demo").innerHTML += `<br/>`+ str.toUpperCase()+`<br/>`+str.toLowerCase()
+        +`<br/>`+str.concat("  .....")+`<br/>`+str.trim();
+        document.getElementById("demo").innerHTML += `<br/>`+ str.charAt(9)+`<br/>`+str.charCodeAt(10)+`<br/>`
+        +str.split(' ')+`<br/>`+str.match("Jit")+`<br/>`+str.match("Kit")+`<br/>`+str.search("my")+`<br/>`+str.search("MY");
+    </script>
+</body>
+</html>

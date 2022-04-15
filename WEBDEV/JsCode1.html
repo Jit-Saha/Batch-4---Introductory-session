@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #one, #two, #Calc, #images{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 1rem;
+            padding: 2%;
+            margin: 1%;
+        }
+        button{
+            padding: 1%;
+            background-color: rgb(20, 100, 153);
+            color: white;
+            font-size: 1.2rem;
+            text-align: center;
+            border-radius: 10px;
+        }
+        input, #ans, #img{
+            margin: 1%;
+            padding: 1%;
+        }
+    </style>
+</head>
+<body>
+    <div id="images">
+        <img id="img" src="./pic1.jpg" alt="Image Here" srcset="" height="250" width="350"/>
+    </div>
+    <div id="one">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora, itaque iusto iste ab a optio cumque quibusdam mollitia ex facere quas quo fuga sit nostrum accusantium, architecto necessitatibus consequuntur nihil veritatis exercitationem maiores facilis odio.
+    </div>
+    <div id="two">
+        Updated at:
+        <table>
+            <thead>
+                <th>Sl. No.</th>
+                <th>Date And Time</th>
+            </thead>
+            <tbody id="Data">
+                
+            </tbody>
+        </table>
+    </div>
+    <button onclick="change()">Click Me!</button>
+    <div id="Calc">
+        <h1>Calculations:</h1>
+        <div>Enter value of a and b: </div>
+        a= <input type="number" id="vala"/>
+        <br>
+        b= <input type="number" id="valb"/>
+        <br>
+        <button type="submit" onclick="pro()">Multiply</button>
+        <button type="submit" onclick="sub()">Sub</button>
+        <br>
+        <div id="ans"></div>
+    </div>
+    <script>
+        let a = true;
+        let c=0;
+        function change(){
+            if(a==true){
+                document.getElementById('one').innerHTML = "<h1>Hello! Done</h1>";
+                document.getElementById('img').src = "./pic2.jpg";
+                a=false;
+                alert("Image Updated!!");
+            }
+            else if(a==false){
+                document.getElementById('one').innerHTML = "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora, itaque iusto iste ab a optio cumque quibusdam mollitia ex facere quas quo fuga sit nostrum accusantium, architecto necessitatibus consequuntur nihil veritatis exercitationem maiores facilis odio."
+                document.getElementById('img').src = "./pic1.jpg";
+                document.getElementById('images').innerHTML += '<img id="img" src="./pic1.jpg" alt="Image Here" srcset="" height="250" width="350"/>';
+                a=true;
+                alert("Image Updated!!");
+            }
+            let date = Date();
+            c++;
+            document.getElementById("Data").innerHTML += "<td>"+c+"</td><td>"+date+"</td>";
+        }
+        function pro(){
+            let c  = 1;
+            let a =document.getElementById('vala').value;
+            let b =document.getElementById('valb').value; 
+            c = a*b;
+            document.getElementById('ans').innerHTML = a+" * "+b+" is "+c;
+            prompt("Result is"+c+"\nPress y/n");
+        }
+        function sub(){
+            let c  = 0;
+            let a =document.getElementById('vala').value;
+            let b =document.getElementById('valb').value; 
+            c = a-b;
+            document.getElementById('ans').write = a+" - "+b+" is "+c;
+            console.log("Result is"+c);
+        }
+    </script>
+</body>
+</html>
